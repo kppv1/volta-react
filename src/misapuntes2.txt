@@ -1,0 +1,41 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+const suma = (el) => {
+  el.preventDefault();
+  const n1=parseInt(el.target.txt_n1.value, 10)
+  const n2=parseInt(el.target.txt_n2.value, 10)
+  const suma = n1+n2
+  const resta = n1-n2
+  const multiplicacion = n1*n2
+  const division = n1/n2
+  console.log('La suma es: ' + suma)
+  console.log('La resta es: ' + resta)
+  console.log('La multiplicacion es: ' + multiplicacion)
+  console.log('La division es: ' + division)
+
+}
+
+function App() {
+  return (
+    <>
+      <div>
+        <form onSubmit={suma}>
+          <p>Ingrese el primer valor:
+            <input type="number" name="txt_n1" />
+          </p>
+          <p>Ingrese el segundo valor:
+            <input type="number" name="txt_n2" />
+          </p>
+          <p>
+            <input type="submit" name="Sumar" />
+          </p>
+        </form>  
+      </div>      
+    </>
+  )
+}
+
+export default App

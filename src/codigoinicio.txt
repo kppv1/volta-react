@@ -1,0 +1,36 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+// function numRandom(){
+//   return Math.trunc(Math.random()*10);
+// }
+
+const numRandom =() => Math.trunc(Math.random()*10);
+
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  const seekers = [
+    'https://www.google.com',
+    'https://www.yahoo.com',
+    'https://www.bing.com',
+  ];
+
+  const fruits = ['watermelon','apple','cannon']
+  return (
+    <>
+     <h4>Num aleatorio: {numRandom()}</h4>
+    <h4>fruits: {fruits[2]}</h4>
+
+    <h2>Buscadores</h2>
+    <p><a href={seekers[0]}>google</a></p> 
+    <p><a href={seekers[1]}>yahoo</a></p> 
+    <p><a href={seekers[2]}>bing</a></p> 
+    </>
+  )
+}
+
+export default App
